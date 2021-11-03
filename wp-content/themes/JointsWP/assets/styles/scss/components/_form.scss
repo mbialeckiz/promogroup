@@ -1,0 +1,95 @@
+.form {
+    position: inherit;
+    &__wrapper {
+        background-color: $white;
+        height: auto;
+        border-radius: $global-radius;
+        box-shadow: 0px 5px 10px 5px rgba(200,200,200,0.5);
+        -webkit-box-shadow: 0px 5px 10px 5px rgba(200,200,200,0.5);
+        -moz-box-shadow: 0px 5px 10px 5px rgba(200,200,200,0.5);
+        position: relative;
+        padding: 1rem;
+        @include breakpoint(large up) {
+            padding: 3rem;
+        }
+        &--inner {
+            display: grid;
+            grid-column-gap: 2rem;
+            grid-template-columns: 1fr;
+            @include breakpoint(large up) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+    &__header {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+        font-weight: $global-weight-bold;
+        padding: 2rem 0;
+        margin: 0 auto;
+        color: $black;
+    }
+    .wpcf7-form {
+        .codedropz-upload-inner {
+            h3 {
+                font-size: 1.2rem;
+                line-height: 2.4rem;
+                position: relative;
+                padding-top: 2rem;
+                &::before {
+                    content: url('/wp-content/uploads/2021/11/Group-3667.png');
+                    display: block;
+                    background-color: transparent;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }
+                @include breakpoint(large up) {
+                    font-size: 1.6rem;
+                }
+            }
+            .cd-upload-btn {
+                font-size: 1.1rem;
+                color: $black;
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    background-color: rgba(237, 167, 24, 0.5);
+                    width: 100%;
+                    height: 12px;
+                    left: 0;
+                    bottom: -4px;
+                    z-index: 0;
+                }
+                @include breakpoint(large up) {
+                    font-size: 1.4rem;
+                }
+
+            }
+        }
+        .dnd-upload-status .dnd-upload-details .name {
+            color: $black;
+        }
+        .dnd-upload-status .dnd-upload-details .dnd-progress-bar span {
+            background: $primary-yellow;
+            color: $black;
+        }
+    }
+}
+
+.page-template-template-kontakt {
+    .gradient {
+        margin-top: 500px;
+        padding: 4rem 0;
+    }
+    .form__header {
+        font-size: 1rem;
+        line-height: 1.5;
+        @include breakpoint(large up) {
+            font-size: 1.5rem;
+        }
+    }
+}

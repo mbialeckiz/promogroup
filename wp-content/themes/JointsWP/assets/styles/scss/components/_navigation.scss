@@ -1,0 +1,175 @@
+/***** ABOVE THE FOLD ******/
+
+/* Main nav, Site HEader */
+.site-header {
+  color: $white;
+  height: 80px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background: #222633;
+  @include breakpoint(large up) {
+    position: unset;
+  }
+  &__title {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: $white;
+    &-span {
+      color: $primary-yellow;
+    }
+  }
+
+  &__body {
+    padding: 20px 0;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 80px;
+    align-items: flex-start;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    position: relative;
+    @include breakpoint(large up) {
+      position: unset;
+      align-items: center;
+    }
+  }
+  &__cta {
+    font-weight: $global-weight-bold;
+    color: $black!important;
+    max-width: 180px;
+  }
+  &__nav-holder {
+    .title-bar {
+      background: $primary-yellow;
+      border-radius: $global-radius;
+
+    }
+  }
+  .top-bar, .top-bar ul {
+    background-color: transparent;
+  }
+}
+
+.main-navigation {
+  position: absolute;
+  top: 79px;    
+  right: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  z-index: 1;
+  background: #222633;
+  padding-bottom: 2rem;
+  @include breakpoint(large up) {
+    position: relative;
+    top: 0;  
+    background: transparent;
+    padding-bottom: 0;
+  }
+  a {
+    color: $white;
+    font-size: 16px;
+    font-weight: $global-weight-bold;
+    &:hover {
+      color: $primary-yellow;
+      text-decoration: underline;
+    }
+    @include breakpoint(large up) {
+      font-weight: 600;
+    }
+  }
+  .current-menu-item {
+    a {
+      color: $primary-yellow;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0;
+    margin-left: 0;
+    list-style-type: none;
+    @include breakpoint(medium down) {
+      display: inline-block;
+    }
+  }
+  .menu-item {
+    display: block;
+    font-weight: 400;
+    padding: 0.5rem 0.2rem;
+    @include breakpoint(large up) {
+      display: inline-block;
+    }
+    &:hover {
+      > a  {
+        color: $primary-yellow;
+      }
+    }
+  }
+}
+
+/* Overwrite from Foundation */
+.menu .active>a, .menu .is-active>a {
+  background: transparent;
+  color: #f0b63f;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.menu.vertical {
+  background: #222633;
+  z-index: 1;
+
+  @include breakpoint(large up) {
+    flex-direction: row;
+  }
+}
+.menu .button, .menu a {
+  line-height: 1.4rem;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  @include breakpoint(large up) {
+    display: inline;
+  }
+}
+
+.skrs-mobile-toggle {
+  font-weight: bold;
+  margin-right: 20px;
+
+  @include breakpoint(medium down) {
+    position: relative;
+  }
+  button {
+    color: $black!important;
+    position: relative;
+    @include breakpoint(medium down) {
+      position: absolute;
+      top: 0;
+      right: -130px;
+      color: $white!important;
+    }
+    span {
+      position: absolute;
+      right: 24px;
+      bottom: 0px;
+      font-family: 'Poppins' sans-serif;
+    }
+  }
+}
+.skrs-mobile-menu-wrapper {
+  position: absolute;
+  top: 50px!important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  .vertical {
+    background-color: $white;
+  }
+}

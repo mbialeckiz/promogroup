@@ -1,0 +1,75 @@
+# Ignore OS generated files
+.DS_Store
+ehthumbs.db
+Thumbs.db
+
+# Ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.idea/
+
+# Ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# Server configuration
+.htaccess
+web.config
+.well-known
+nginx.conf
+
+# Wordpress core
+wp-config.php
+wp-content/upgrade/
+wp-content/uploads/
+
+# Ignore node/bower/sass dependency directories
+.sass-cache/
+node_modules/
+bower_components/
+
+# File add by Wordfence plugin
+wordfence-waf.php
+.user.ini
+
+# Plugins storages
+wp-content/plugins/all-in-one-wp-migration/storage/
+wp-content/ewww/
+wp-content/webp-express/
+
+# Backup plugins
+*.bak
+wp-content/updraft/
+wp-content/backup-db/
+wp-content/backups/
+wp-content/ai1wm-backups/
+wp-content/envato-backups/
+
+# Cache plugins
+wp-content/cache/
+wp-content/w3tc-config/
+wp-content/wp-rocket-config/
+wp-content/plugins/bwp-minify/cache/
+wp-content/wp-cache-config.php
+wp-content/advanced-cache.php
+wp-content/db.php
+
+# Others
+wp-content/blogs.dir/
+wp-content/wflogs/
+wp-content/wppp/
+
+.cvs
+.svn
+readme*html
+refresh_db.sh
+sitemap.xml
+cgi-bin/
+
+# Custom
+/vendor/
+/wp-config/environments/env.php
+docker-compose.yml
+Dockerfile
